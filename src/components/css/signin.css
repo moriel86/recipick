@@ -1,0 +1,33 @@
+.signin-container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.content-box {
+  align-items: center;
+}
+
+.order-img {
+  width: 534px;
+  height: 409.04px;
+  margin: auto 0;
+}
+
+.form-box {
+  background-color: var(--light-blue-bgc);
+  width: 619px;
+  height: 447px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  margin-left: 40px;
+  border-radius: 34px;
+}
+
+@media screen and (max-width: 1400px) {
+  .title-fSize {
+    font-size: 70px;
+  }
+}

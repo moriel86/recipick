@@ -1,0 +1,22 @@
+.swal2-popup {
+  background-color: var(--light-blue-bgc);
+}
+
+.swal2-title {
+  font-family: "Lactosa";
+  color: var(--txt-red) !important;
+}
+
+.swal2-content {
+  font-family: "MerchantLedgerRough";
+}
+
+.swal2-confirm,
+.swal2-deny,
+.swal2-cancel {
+  font-family: "MerchantLedgerRoughThin";
+}
+.swal2-icon.swal2-warning {
+  border-color: var(--txt-red) !important;
+  color: var(--txt-red) !important;
+}

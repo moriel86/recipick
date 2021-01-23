@@ -1,0 +1,18 @@
+.hero-1 {
+  background-image: url("http://localhost:8181/api/images/welcome-hero-1.png")
+    no-repeat;
+  background-size: cover;
+  width: 1231px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 1400px) {
+  .title-fSize {
+    font-size: 70px;
+  }
+}
+
+.recipe-book {
+  width: 674.34px;
+  height: 528.82px;
+}

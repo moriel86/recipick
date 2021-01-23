@@ -1,0 +1,8 @@
+.nav-item {
+  font-family: "MerchantLedgerRough";
+  color: var(--light-blue-bgc) !important;
+}
+.active {
+  color: black !important;
+  font-family: "MerchantLedgerRegular";
+}

@@ -1,0 +1,92 @@
+main,
+footer {
+  background-color: #f4f6e9;
+}
+header {
+  background-color: #c72326;
+  box-shadow: lightgray;
+}
+
+/* Lactosa */
+@font-face {
+  font-family: "Lactosa";
+  src: local("Lactosa"),
+    url("./fonts/elements-lactosa-ZB8TLLJ-2019-12-19/TTF/Lactosa.ttf")
+      format("TTF");
+}
+
+/* MerchantLedger-Rough */
+@font-face {
+  font-family: "MerchantLedgerRough";
+  src: local("MerchantLedgerRough"),
+    url("./fonts/elements-merchant-ledger-W5S6NYS-2020-07-28/Web Fonts/MerchantLedgerRough.woff")
+      format("WOFF");
+}
+@font-face {
+  font-family: "MerchantLedgerRoughThin";
+  src: local("MerchantLedgerRoughThin"),
+    url("./fonts/elements-merchant-ledger-W5S6NYS-2020-07-28/Web Fonts/MerchantLedgerRoughThin.woff")
+      format("WOFF");
+}
+@font-face {
+  font-family: "MerchantLedgerThin";
+  src: local("MerchantLedgerThin"),
+    url("./fonts/elements-merchant-ledger-W5S6NYS-2020-07-28/Web Fonts/MerchantLedgerThin.woff")
+      format("WOFF");
+}
+@font-face {
+  font-family: "MerchantLedgerRegular";
+  src: local("MerchantLedgerRegular"),
+    url("./fonts/elements-merchant-ledger-W5S6NYS-2020-07-28/Web Fonts/MerchantLedgerRegular.woff")
+      format("WOFF");
+}
+
+:root {
+  --txt-red: #c72326;
+  --txt-green: #55ac3d;
+  --light-blue-bgc: #e5e9f3;
+}
+
+/* fonts */
+.fPrimary {
+  font-family: "Lactosa";
+}
+
+.fSecondary-regular {
+  font-family: "MerchantLedgerRegular";
+}
+.fSecondary-rough {
+  font-family: "MerchantLedgerRough";
+}
+.fSecondary-thin {
+  font-family: "MerchantLedgerThin";
+}
+.fSecondary-roughThin {
+  font-family: "MerchantLedgerRoughThin";
+}
+
+.title-fSize {
+  font-size: 4.8em;
+}
+
+.title-secondary {
+  font-family: 3em;
+}
+
+.subTitle-fSize {
+  font-size: 40px;
+}
+.subTitle-secondary {
+  font-size: 30px;
+}
+
+.txt-green {
+  color: var(--txt-green);
+}
+.txt-red {
+  color: var(--txt-red);
+}
+/* buttons */
+.input-bgc {
+  background-color: #eaeaea !important ;
+}

@@ -1,0 +1,17 @@
+.recipe-card {
+  background-color: var(--light-blue-bgc);
+  width: 300px;
+  border-radius: 20px;
+}
+
+.delete-btn {
+  display: inline;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.fav-icon {
+  cursor: pointer;
+}

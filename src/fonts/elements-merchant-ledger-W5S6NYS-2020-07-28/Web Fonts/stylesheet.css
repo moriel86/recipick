@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Merchant Ledger Rough';
+    src: local('Merchant Ledger Rough'), local('MerchantLedgerRough'),
+        url('MerchantLedgerRough.woff2') format('woff2'),
+        url('MerchantLedgerRough.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merchant Ledger Rough';
+    src: local('Merchant Ledger Rough Thin'), local('MerchantLedgerRoughThin'),
+        url('MerchantLedgerRoughThin.woff2') format('woff2'),
+        url('MerchantLedgerRoughThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merchant Ledger';
+    src: local('Merchant Ledger'), local('MerchantLedgerRegular'),
+        url('MerchantLedgerRegular.woff2') format('woff2'),
+        url('MerchantLedgerRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merchant Ledger';
+    src: local('Merchant Ledger Thin'), local('MerchantLedgerThin'),
+        url('MerchantLedgerThin.woff2') format('woff2'),
+        url('MerchantLedgerThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
