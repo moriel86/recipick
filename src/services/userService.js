@@ -21,7 +21,7 @@ export async function toggleFavs(recipeId) {
         return result;
 
     } catch (ex) {
-        console.table(ex);
+        console.log(ex);
     }
 
 };
