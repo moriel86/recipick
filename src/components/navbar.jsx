@@ -35,6 +35,7 @@ class Navbar extends Component {
                   About
                 </NavLink>
               </li>
+
               {user && (
                 <li className="nav-item">
                   <NavLink className="nav-item nav-link" to="/all-recipes">

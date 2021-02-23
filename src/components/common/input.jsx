@@ -1,16 +1,18 @@
+import { useField } from "formik";
 import React from "react";
 import "../css/form.css";
 
-const Input = ({ name, label, error, ...rest }) => {
+const Input = ({ label, value, type = "text", error, ...props }) => {
+  const [field] = useField(props);
+  console.log(field, "this is field");
+  console.log(value, "this is value");
+
   return (
     <div className="form-group">
-      <label className="fSecondary-regular" htmlFor={name}>
-        {label}
-      </label>
+      <label className="fSecondary-regular">{label}</label>
       <input
-        {...rest}
-        name={name}
-        id={name}
+        {...field}
+        type={type}
         className="form-control fSecondary-regular input-bgc"
       />
       {error && <span className="text-danger">{error}</span>}

@@ -6,13 +6,8 @@
   height: 1000px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .title-fSize {
-    font-size: 70px;
+    font-size: 20px;
   }
-}
-
-.recipe-book {
-  width: 674.34px;
-  height: 528.82px;
 }

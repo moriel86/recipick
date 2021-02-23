@@ -1,17 +1,15 @@
-import { Component } from "react";
+import { useEffect } from "react";
 import userService from "../services/userService";
 
-class Logout extends Component {
-  state = {};
-
-  componentDidMount() {
-    userService.logout();
-    window.location = "/signin";
-  }
-
-  render() {
-    return null;
-  }
-}
+const Logout = () => {
+  useEffect(() => {
+    async function loggingOut() {
+      userService.logout();
+      window.location = "/signing";
+    }
+    loggingOut();
+  }, []);
+  return null;
+};
 
 export default Logout;

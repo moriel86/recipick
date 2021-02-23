@@ -16,7 +16,7 @@ const Recipe = ({ recipe, onDelete, toggleFav }) => {
             <h5 className="card-title fSecondary-rough">
               {recipe.title}{" "}
               <span onClick={toggleFav} className="fav-icon">
-                <i className="far fa-heart"></i>
+                <i className="far fa-heart text-success"></i>
               </span>{" "}
             </h5>
           </div>
@@ -28,9 +28,21 @@ const Recipe = ({ recipe, onDelete, toggleFav }) => {
             alt={recipe.title}
           />
           <div className="card-body">
-            <p className="card-text fSecondary-thin border-bottom pb-3">
-              {recipe.ingredients}
-            </p>
+            <div className="card-text fSecondary-thin border-bottom pb-3">
+              {recipe.ingredients.map((ingredient) => {
+                const { name, amount } = ingredient;
+                console.log(ingredient);
+                return (
+                  <>
+                    <div key={Math.random().toString(36).substr(2, 9)}>
+                      <p>
+                        {amount} {name}
+                      </p>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
             <p className="card-text fSecondary-thin  ">{recipe.instructions}</p>
             {user._id === recipe.user_id && (
               <React.Fragment>
