@@ -21,32 +21,17 @@ import "./App.css";
 import 'react-toastify/dist/ReactToastify.css';
 import { useViewport } from "./Viewport/view-port";
 
-const useWindowWidth = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handelSize = () => {
-      setWindowWidth(window.innerWidth);
-
-    }
-    window.addEventListener('resize', handelSize);
-    return () => {
-      window.removeEventListener('resize', handelSize);
-    }
-  }, [])
-  return windowWidth;
-}
 
 const App = () => {
 
   const location = useLocation()
   const [user, setUser] = useState()
-  const width = useWindowWidth();
-  const port = useViewport()
+  const { viewport } = useViewport()
 
   useEffect(() => {
-    console.log(width, "the width");
-    console.log(port, "the port");
+
+    console.log(viewport, "the port");
     async function recipesService() {
       const user = userService.getCurrentUser();
       setUser(user);
