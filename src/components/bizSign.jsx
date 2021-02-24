@@ -6,9 +6,27 @@ import { Redirect } from "react-router-dom";
 import * as Yup from "yup";
 import { Form, Formik, useField } from "formik";
 import Input from "./common/input";
+import { motion } from "framer-motion";
 import "./css/business.css";
 
 const bizSign = () => {
+  const containerVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+
+      transition: {
+        duration: 1,
+      },
+    },
+    exit: {
+      x: "-100vw",
+      transition: { ease: "easeInOut" },
+    },
+  };
+
   const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
     password: Yup.string().required().min(6).label("Password"),
@@ -25,7 +43,13 @@ const bizSign = () => {
   if (userService.getCurrentUser()) return <Redirect to="/" />;
 
   return (
-    <div className="container signup-container">
+    <motion.div
+      className="container signup-container"
+      variants={containerVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <div className="row content-box">
         <div className="col-lg-7 mt-5">
           <h1 className="fPrimary title-fSize txt-red">
@@ -107,7 +131,7 @@ const bizSign = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

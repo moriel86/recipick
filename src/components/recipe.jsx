@@ -2,15 +2,39 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./css/recipe.css";
 import userService from "../services/userService";
+import { motion } from "framer-motion";
 
 const user = userService.getCurrentUser();
 console.log("users list: ", user);
+
+const containerVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
 
 const Recipe = ({ recipe, onDelete, toggleFav }) => {
   console.log(recipe);
   return (
     <React.Fragment>
-      <div className="col-md-6 col-lg-4 my-4">
+      <motion.div
+        className="col-md-6 col-lg-4 my-4"
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         <div className="recipe-card">
           <div className="card-body">
             <h5 className="card-title fSecondary-rough">
@@ -63,7 +87,7 @@ const Recipe = ({ recipe, onDelete, toggleFav }) => {
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
     </React.Fragment>
   );
 };

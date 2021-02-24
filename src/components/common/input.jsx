@@ -4,8 +4,6 @@ import "../css/form.css";
 
 const Input = ({ label, value, type = "text", error, ...props }) => {
   const [field] = useField(props);
-  console.log(field, "this is field");
-  console.log(value, "this is value");
 
   return (
     <div className="form-group">

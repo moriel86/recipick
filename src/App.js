@@ -28,10 +28,9 @@ const App = () => {
   const location = useLocation()
   const [user, setUser] = useState()
   const { viewport } = useViewport()
+  const device = viewport.device
 
   useEffect(() => {
-
-    console.log(viewport, "the port");
     async function recipesService() {
       const user = userService.getCurrentUser();
       setUser(user);

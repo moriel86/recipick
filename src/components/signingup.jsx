@@ -7,9 +7,27 @@ import "./css/signup.css";
 import { Form, Formik, useField } from "formik";
 import Input from "./common/input";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Signingup = () => {
   const history = useHistory();
+
+  const containerVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+
+      transition: {
+        duration: 1,
+      },
+    },
+    exit: {
+      x: "-100vw",
+      transition: { ease: "easeInOut" },
+    },
+  };
 
   const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
@@ -28,7 +46,13 @@ const Signingup = () => {
 
   return (
     <React.Fragment>
-      <div className="container signup-container">
+      <motion.div
+        className="container signup-container"
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         <div className="row content-box">
           <div className="col-lg-6 mt-5">
             <h1 className="fPrimary  txt-red title-fSize">Some text here</h1>
@@ -37,7 +61,7 @@ const Signingup = () => {
               <span className="fSecondary-rough  txt-green">favorite </span>
               recipes
             </p>
-            <img className="order-img" src="/images/ordering.png" alt="" />
+            <img className="order-img" src="/images/couple-cook.svg" alt="" />
           </div>
           <div className="col-lg-6">
             <div className="signup-box">
@@ -104,7 +128,7 @@ const Signingup = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </React.Fragment>
   );
 };

@@ -37,6 +37,7 @@ const titleVariants = {
     transition: { ease: "easeInOut" },
   },
 };
+
 const containerVariants = {
   initial: {
     opacity: 0,

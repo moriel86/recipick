@@ -7,6 +7,24 @@ import { Link, useHistory, useParams } from "react-router-dom";
 import { Field, FieldArray, Form, Formik, useField } from "formik";
 import TextArea from "./common/textarea";
 import Input from "./common/input";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
 
 const RecipeEdit = () => {
   const history = useHistory();
@@ -95,7 +113,13 @@ const RecipeEdit = () => {
   };
 
   return (
-    <div className="container createRecipe-container">
+    <motion.div
+      className="container createRecipe-container"
+      variants={containerVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <div className="row content-box my-5">
         <div className="col-lg-5 mt-5">
           <h1 className="fPrimary title-fSize txt-red">New recipe</h1>
@@ -239,7 +263,7 @@ const RecipeEdit = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

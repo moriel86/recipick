@@ -5,6 +5,24 @@ import Input from "./common/input";
 import userService from "../services/userService";
 // import { Redirect } from "react-router-dom";
 import "./css/signin.css";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
 
 const Signing = () => {
   // if (userService.getCurrentUser()) return <Redirect to="/" />;
@@ -21,7 +39,13 @@ const Signing = () => {
   };
   return (
     <React.Fragment>
-      <div className="container signin-container">
+      <motion.div
+        className="container signin-container"
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         <div className="row content-box">
           <div className="col-lg-6 mt-5">
             <h1 className="fPrimary title-fSize txt-red">Some text here</h1>
@@ -30,7 +54,7 @@ const Signing = () => {
               <span className="fSecondary-rough  txt-green">favorite </span>
               recipes
             </p>
-            <img className="order-img" src="/images/ordering.png" alt="" />
+            <img className="order-img" src="/images/ordering.svg" alt="" />
           </div>
           <div className="col-lg-6">
             <div className="form-box">
@@ -90,7 +114,7 @@ const Signing = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </React.Fragment>
   );
 };

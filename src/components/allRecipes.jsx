@@ -3,6 +3,7 @@ import recipeService from "../services/recipeService";
 import userService from "../services/userService";
 import Recipe from "./recipe";
 import "./css/allRecipes.css";
+import { motion } from "framer-motion";
 
 const AllRecipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -15,13 +16,36 @@ const AllRecipes = () => {
     recipesService();
   }, []);
 
+  const containerVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+
+      transition: {
+        duration: 1,
+      },
+    },
+    exit: {
+      x: "-100vw",
+      transition: { ease: "easeInOut" },
+    },
+  };
+
   const toggleFav = async (recipeId) => {
     await userService.toggleFavs(recipeId);
   };
 
   return (
     <React.Fragment>
-      <div className="container main-container">
+      <motion.div
+        className="container main-container"
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         <div className="row">
           <div className="col mt-5">
             <h1 className="fPrimary title-fSize txt-red">Search for</h1>
@@ -62,7 +86,7 @@ const AllRecipes = () => {
               />
             ))}
         </div>
-      </div>
+      </motion.div>
     </React.Fragment>
   );
 };
