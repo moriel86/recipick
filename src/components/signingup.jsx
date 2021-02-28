@@ -61,7 +61,7 @@ const Signingup = () => {
               <span className="fSecondary-rough  txt-green">favorite </span>
               recipes
             </p>
-            <img className="order-img" src="/images/couple-cook.svg" alt="" />
+            <img className="couple-cook" src="/images/couple-cook.svg" alt="" />
           </div>
           <div className="col-lg-6">
             <div className="signup-box">

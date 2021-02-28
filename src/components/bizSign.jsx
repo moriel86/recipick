@@ -60,7 +60,7 @@ const bizSign = () => {
             <span className="fSecondary-rough  txt-green">favorite </span>
             recipes
           </p>
-          <img className="order-img" src="/images/ordering.png" alt="" />
+          <img className="order-img" src="/images/ordering.svg" alt="" />
         </div>
         <div className="col-lg-5">
           <div className="biz-signup-box ">

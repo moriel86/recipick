@@ -82,11 +82,7 @@ const CreatNewRecipe = () => {
             <span className="fSecondary-rough  txt-green">best </span>
             recipes
           </p>
-          <img
-            className="order-img"
-            src="/images/Professional-chef.svg"
-            alt=""
-          />
+          <img className="chef" src="/images/Professional-chef.svg" alt="" />
         </div>
         <div className="col-lg-7">
           <div className="create-recipe-box ">

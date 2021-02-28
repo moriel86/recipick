@@ -16,7 +16,6 @@ const containerVariants = {
     opacity: 1,
 
     transition: {
-      delay: 1.5,
       duration: 1.5,
     },
   },
@@ -32,7 +31,7 @@ const MyRecipes = () => {
   useEffect(() => {
     async function recipesService() {
       const { data } = await recipeService.getMyRecipes();
-      console.log("from my recipes", data);
+
       if (data.length > 0) setRecipes(data);
     }
     recipesService();

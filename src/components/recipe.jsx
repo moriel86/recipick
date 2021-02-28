@@ -5,7 +5,6 @@ import userService from "../services/userService";
 import { motion } from "framer-motion";
 
 const user = userService.getCurrentUser();
-console.log("users list: ", user);
 
 const containerVariants = {
   initial: {
@@ -25,7 +24,6 @@ const containerVariants = {
 };
 
 const Recipe = ({ recipe, onDelete, toggleFav }) => {
-  console.log(recipe);
   return (
     <React.Fragment>
       <motion.div
@@ -38,10 +36,10 @@ const Recipe = ({ recipe, onDelete, toggleFav }) => {
         <div className="recipe-card">
           <div className="card-body">
             <h5 className="card-title fSecondary-rough">
-              {recipe.title}{" "}
+              {recipe.title}
               <span onClick={toggleFav} className="fav-icon">
                 <i className="far fa-heart text-success"></i>
-              </span>{" "}
+              </span>
             </h5>
           </div>
           <img
@@ -55,7 +53,7 @@ const Recipe = ({ recipe, onDelete, toggleFav }) => {
             <div className="card-text fSecondary-thin border-bottom pb-3">
               {recipe.ingredients.map((ingredient) => {
                 const { name, amount } = ingredient;
-                console.log(ingredient);
+
                 return (
                   <>
                     <div key={Math.random().toString(36).substr(2, 9)}>
@@ -67,6 +65,7 @@ const Recipe = ({ recipe, onDelete, toggleFav }) => {
                 );
               })}
             </div>
+
             <p className="card-text fSecondary-thin  ">{recipe.instructions}</p>
             {user._id === recipe.user_id && (
               <React.Fragment>

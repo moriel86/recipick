@@ -7,10 +7,13 @@ import { motion } from "framer-motion";
 
 const AllRecipes = () => {
   const [recipes, setRecipes] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [favIcon, setFavIcon] = useState(false);
 
   useEffect(() => {
     async function recipesService() {
       const { data } = await recipeService.getRecipes();
+
       if (data.length > 0) setRecipes(data);
     }
     recipesService();
@@ -34,6 +37,8 @@ const AllRecipes = () => {
   };
 
   const toggleFav = async (recipeId) => {
+    const currentState = favIcon;
+    setFavIcon(!favIcon);
     await userService.toggleFavs(recipeId);
   };
 
@@ -62,6 +67,9 @@ const AllRecipes = () => {
                 type="text"
                 className="form-control fSecondary-regular"
                 placeholder="Recipick.."
+                onChange={(event) => {
+                  setSearchTerm(event.target.value);
+                }}
               />
               <div className="input-group-append">
                 <button
@@ -76,15 +84,28 @@ const AllRecipes = () => {
         </div>
         <div className="row">
           {recipes.length > 0 &&
-            recipes.map((recipe) => (
-              <Recipe
-                key={recipe._id}
-                recipe={recipe}
-                toggleFav={() => {
-                  toggleFav(recipe._id);
-                }}
-              />
-            ))}
+            recipes
+              .filter((val) => {
+                if (setSearchTerm === "") return val;
+                if (
+                  val.title
+                    .toLowerCase()
+                    .includes(searchTerm.toLocaleLowerCase())
+                ) {
+                  return val;
+                }
+                return null;
+              })
+              .map((recipe) => (
+                <Recipe
+                  key={recipe._id}
+                  recipe={recipe}
+                  toggleFav={() => {
+                    toggleFav(recipe._id);
+                  }}
+                  favIcon={favIcon}
+                />
+              ))}
         </div>
       </motion.div>
     </React.Fragment>

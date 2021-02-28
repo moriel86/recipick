@@ -30,4 +30,13 @@
   .title-fSize {
     font-size: 70px;
   }
+  .form-box {
+    width: auto;
+    height: 400px;
+    margin-top: 50px;
+  }
+  .order-img {
+    width: 222.61px;
+    height: 170.52px;
+  }
 }

@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.order-img {
+.couple-cook {
   width: 397.37px;
   height: 304.38px;
   margin: auto 0;
@@ -30,5 +30,10 @@
 @media screen and (max-width: 1400px) {
   .title-fSize {
     font-size: 70px;
+  }
+  .signup-box {
+    width: auto;
+    height: 500px;
+    margin-top: 50px;
   }
 }

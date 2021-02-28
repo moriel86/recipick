@@ -1,13 +1,54 @@
-.hero-1 {
-  background-image: url("http://localhost:8181/api/images/welcome-hero-1.png")
-    no-repeat;
+.home-container {
+  min-height: 100vh;
   background-size: cover;
-  width: 1231px;
-  height: 1000px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.main-container {
+  padding-top: 120px;
+}
+.txt-row {
+  height: 400px;
+}
+.txt-wrap {
+  background-color: #f4f6e9;
+}
+.txt-mark {
+  font-size: 3.5rem;
 }
 
 @media screen and (max-width: 1200px) {
   .title-fSize {
-    font-size: 20px;
+    font-size: 60px;
+  }
+  .subTitle-fSize {
+    font-size: 30px;
+  }
+  .recipe-img {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .recipe-book {
+    width: 285px;
+    height: 223.5px;
+    margin: 0 auto;
+  }
+  .couple-cook {
+    width: 229px;
+    height: 165.15px;
+  }
+  .recipes {
+    width: 198.69px;
+    height: 125.65;
+  }
+  .subTitle-fSize {
+    font-size: 18px;
+  }
+  .txt-row {
+    height: auto;
+    margin-top: 100px;
+  }
+  .txt-mark {
+    font-size: 2.5rem;
   }
 }

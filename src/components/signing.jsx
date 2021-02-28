@@ -54,7 +54,11 @@ const Signing = () => {
               <span className="fSecondary-rough  txt-green">favorite </span>
               recipes
             </p>
-            <img className="order-img" src="/images/ordering.svg" alt="" />
+            <img
+              className="order-img float-right"
+              src="/images/ordering.svg"
+              alt=""
+            />
           </div>
           <div className="col-lg-6">
             <div className="form-box">

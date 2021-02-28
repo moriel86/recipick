@@ -30,11 +30,6 @@ class Navbar extends Component {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-item nav-link" to="/about">
-                  About
-                </NavLink>
-              </li>
 
               {user && (
                 <li className="nav-item">

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Home from "./components/home";
-import About from "./components/about";
+
 import Logout from "./components/logout";
 import userService from "./services/userService";
 import ProtectedRoute from "./components/common/protectedRoute";
@@ -19,7 +19,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
 import 'react-toastify/dist/ReactToastify.css';
-import { useViewport } from "./Viewport/view-port";
+
 
 
 
@@ -27,12 +27,12 @@ const App = () => {
 
   const location = useLocation()
   const [user, setUser] = useState()
-  const { viewport } = useViewport()
-  const device = viewport.device
+
 
   useEffect(() => {
     async function recipesService() {
       const user = userService.getCurrentUser();
+      console.log(user, "user");
       setUser(user);
     }
     recipesService();
@@ -56,7 +56,7 @@ const App = () => {
             <Route path="/logout" component={Logout} />
             <Route path="/signin" component={Signing} />
             <Route path="/Signup" component={Signingup} />
-            <Route path="/about" component={About} />
+
             <Route path="/" exact component={Home} />
           </Switch>
         </AnimatePresence>

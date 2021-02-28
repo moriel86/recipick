@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.order-img {
+.chef {
   width: 397.37px;
   height: 304.38px;
   margin: auto 0;
@@ -27,8 +27,11 @@
   border-radius: 34px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .title-fSize {
-    font-size: 70px;
+    font-size: 60px;
+  }
+  .create-recipe-box {
+    width: auto;
   }
 }
