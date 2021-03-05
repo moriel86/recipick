@@ -49,20 +49,20 @@ header {
 
 /* fonts */
 .fPrimary {
-  font-family: "Lactosa";
+  font-family: "Lactosa", serif;
 }
 
 .fSecondary-regular {
-  font-family: "MerchantLedgerRegular";
+  font-family: "MerchantLedgerRegular", sans-serif;
 }
 .fSecondary-rough {
-  font-family: "MerchantLedgerRough";
+  font-family: "MerchantLedgerRough", sans-serif;
 }
 .fSecondary-thin {
-  font-family: "MerchantLedgerThin";
+  font-family: "MerchantLedgerThin", sans-serif;
 }
 .fSecondary-roughThin {
-  font-family: "MerchantLedgerRoughThin";
+  font-family: "MerchantLedgerRoughThin", sans-serif;
 }
 
 .title-fSize {

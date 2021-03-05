@@ -152,7 +152,7 @@ const Home = () => {
             </div>
             <div className="col-md-4 mt-5">
               <img
-                className="couple-cook img-rellax"
+                className="couple-cook-home img-rellax"
                 src="/images/couple-cook.svg"
                 alt=""
               />

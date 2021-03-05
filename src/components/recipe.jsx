@@ -23,7 +23,7 @@ const containerVariants = {
   },
 };
 
-const Recipe = ({ recipe, onDelete, toggleFav }) => {
+const Recipe = ({ recipe, onDelete, toggleFav, favIcon }) => {
   return (
     <React.Fragment>
       <motion.div
@@ -38,7 +38,11 @@ const Recipe = ({ recipe, onDelete, toggleFav }) => {
             <h5 className="card-title fSecondary-rough">
               {recipe.title}
               <span onClick={toggleFav} className="fav-icon">
-                <i className="far fa-heart text-success"></i>
+                <i
+                  className={`far fa-heart ${
+                    favIcon ? "text-success" : "text-secondary"
+                  }`}
+                ></i>
               </span>
             </h5>
           </div>
